@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Materiais Escolares</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px; border: 1px solid #ccc; }
+        th { background-color: #f2f2f2; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Materiais Escolares</h1>
+    <a href="/novo">➕ Adicionar novo material</a>
+    <br><br>
+    <table>
+        <tr>
+            <th>ID</th><th>Nome</th><th>Tipo</th><th>Qtd</th><th>Local</th><th>Obs</th><th>Ações</th>
+        </tr>
+        {% for item in materiais %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.tipo }}</td>
+            <td>{{ item.quantidade }}</td>
+            <td>{{ item.localizacao }}</td>
+            <td>{{ item.observacao }}</td>
+            <td>
+                <!-- futuramente: <a href="/editar/{{ item.id }}">✏️</a> -->
+                <a href="/deletar/{{ item.id }}" onclick="return confirm('Tem certeza?')">🗑️</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
