@@ -1,5 +1,24 @@
 print("✅ O Python está funcionando!")
-#pip install mysql-connector-python  conectar aos
+# CONECTAR AO BANCO DE DADOS
 
-#python gestor_materiais_mysql.py rodar o projeto
+# pip install mysql-connector-py
+
+#----------------------------------------
+
+# RODAR O PROJETO
+
+# python gestor_materiais_mysql.py
+
+#----------------------------------------
+
+# INSTALAR O FLASK
+
+# pip install flask
+
+#----------------------------------------
+
+# INICIAR O SERVIDOR
+
+# python app.py
+
 
