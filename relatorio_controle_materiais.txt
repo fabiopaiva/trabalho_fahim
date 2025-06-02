@@ -1,0 +1,44 @@
+
+RELATÓRIO SIMPLES DO PROJETO DE CONTROLE DE MATERIAIS ESCOLARES
+
+FERRAMENTAS UTILIZADAS:
+- Python 3 + Flask — Para o backend web.
+- MySQL — Banco de dados relacional.
+- VS Code — Editor de código.
+- HTML + CSS — Para a interface do usuário.
+- Git + GitHub — Controle de versão.
+- Servidor local Flask — Para testes.
+
+PRINCIPAIS COMANDOS E RECURSOS USADOS:
+- Criar banco no MySQL: CREATE DATABASE controle_materiais;
+- Criar tabela: CREATE TABLE materiais (...);
+- Instalar dependências: pip install flask mysql-connector-python
+- Rodar servidor local: python app.py (ou flask run)
+- Subir para GitHub: git init, git add ., git commit -m "", git remote, push
+- HTML/CSS: Uso de templates index.html, form.html, e style.css
+- Adicionar logo externa: <img src="URL_DA_LOGO" class="logo">
+
+FUNCIONALIDADES IMPLEMENTADAS:
+- Cadastro, listagem, edição e exclusão de materiais (CRUD).
+- Conexão com banco MySQL.
+- Interface HTML com estilo CSS.
+- Logo institucional no topo da página.
+- Estrutura organizada com templates/ e static/.
+
+DIFICULDADES E CONFLITOS ENCONTRADOS:
+- Conexão com MySQL não aparecia nada no terminal → Verificado que faltava print() ou erro no app.py
+- Pasta static/ não encontrada → Criada manualmente no mesmo nível de app.py
+- HTML sem exibir o CSS → Corrigido com {{ url_for('static', filename='style.css') }}
+- Editar materiais não funcionava → Adicionadas rotas /editar/<id> e /atualizar no Flask
+- Layout simples demais → Adicionado style.css com visual limpo e responsivo
+- Logo local não aparecia → Trocado para imagem online com link direto (src="url")
+
+PROBLEMAS RESOLVIDOS:
+- Integração de Flask com MySQL com sucesso.
+- CRUD completo funcionando.
+- Interface com boa usabilidade e visual agradável.
+- Repositório configurado no GitHub.
+- Projeto testado e funcionando em servidor local.
+
+CONCLUSÃO:
+O sistema foi concluído com sucesso, oferecendo um ambiente funcional para registrar e gerenciar materiais escolares, móveis e equipamentos. As dificuldades iniciais foram superadas com ajustes no código, verificação de rotas e organização dos arquivos. O projeto está pronto para uso em ambiente local e pode futuramente ser publicado em um servidor online.
